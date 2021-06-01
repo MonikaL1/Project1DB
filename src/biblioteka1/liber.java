@@ -3,6 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+ /*
+* Projekt nr.3
+*Krijimi i nje aplikacioni me nderfaqe grafike, i cili mundeson shtimin e elementeve te tabeles 
+duke i integruar keto te dhena ne databasen e krijuar.
+*Studenti: Monika Lumi, Viti II Informatike
+* Data: 25.5.2021
+*/
+
 package biblioteka1;
 
 import java.sql.Connection;
@@ -147,11 +155,11 @@ public class liber extends javax.swing.JFrame {
            
            con1 = DriverManager.getConnection("jdbc:mysql://localhost/biblioteka1","root","");
            insert = con1prepareStatement("insert into liber(titulli,autori,ISBN,ShtepiaBotuese,VitiBotimit) values(?,?,?,?,?)");
-           insert.setString(1,Titulli);
-           insert.setString(2,Autori);
-           insert.setString(3,ISBN);
-           insert.setString(4,ShtepiaBotuese);
-           insert.setString(5,VitiBotimit);
+           insert.setString(0,Titulli);
+           insert.setString(1,Autori);
+           insert.setString(2,ISBN);
+           insert.setString(3,ShtepiaBotuese);
+           insert.setString(4,VitiBotimit);
            insert.executeUpdate();
            
            JOptionPane.showMessageDialog(this,"Added");
